@@ -14,3 +14,10 @@ html, body {
   #app {
     font-family: 'Josefin Sans', sans-serif;
   }
+
+  .v-bottom-navigation {
+    background-color: black !important;
+    display: flex !important;
+    position: fixed !important;
+  }
+

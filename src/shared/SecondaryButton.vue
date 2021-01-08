@@ -1,8 +1,8 @@
 <template>
 <div class="flex justify-center">
-    <button class="w-7/12 bg-white border-2 border-black text-black py-2 text-xs rounded">
+    <div class="w-7/12 bg-white text-black border-2 border-black py-2 rounded text-xs text-center">
     <slot></slot>
-    </button>
+    </div>
 </div>
 </template>
 

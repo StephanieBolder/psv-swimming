@@ -1,11 +1,17 @@
 <template>
   <div>
-    <img src="../assets/login.png" />
+   
     <div class="w-10/12 flex flex-col mx-auto ">
-        <heading class="text-xl mb-16">Login</heading>
+        <heading class="text-xl my-16">Registratie</heading>
     <form action="">
 
       <div class="flex flex-col mb-4">
+        <label for="Volledige naam
+        ">Volledige naam</label>
+        <input class="bg-gray-100 p-2" type="text" v-model="form.name" placeholder="John doe"/>
+
+      </div>
+       <div class="flex flex-col mb-4">
         <label for="email
         ">E-mail</label>
         <input class="bg-gray-100 p-2" type="text" v-model="form.email" placeholder="loremipsum@gmail.nl"/>
@@ -17,9 +23,8 @@
         <input class="bg-gray-100 p-2" placeholder="wachtwoord" type="password" v-model="form.password"/>
         
       </div>
-      <router-link class="float-right text-xs mt-1 text-gray-400" to="password-reset">Wachtwoord vergeten?</router-link>
-      <primary-button class="mt-16">Inloggen</primary-button>
-      <router-link class="text-xs text-gray-400" to="register">Nog geen account? <span class="text-black font-semibold">Registreer</span></router-link>
+      <primary-button class="mt-16">Registreren</primary-button>
+      <router-link class="text-xs text-gray-400" to="register">Heb je al een account? <span class="text-black font-semibold">Login</span></router-link>
     </form>
     </div>
 
@@ -38,13 +43,14 @@ export default {
    data() {
        return {
            form: {
+               name: "",
                email: "",
                password: "",
            }
        }
    },
    methods: {
-      authenticate() {
+      register() {
       auth
         .authenticate(this.form.email, this.form.password)
         .then((response) => {

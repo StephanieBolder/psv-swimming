@@ -1,9 +1,9 @@
 <template>
-<div class="flex justify-center">
-    <div class="font-bold">
+<div class="flex">
+    <h1 class="font-bold">
     <slot> </slot>
     <div class="border-4 border-darkred -mt-25 "></div>
-    </div>
+    </h1>
 </div>
 </template>
 
