@@ -1,25 +1,28 @@
 <template>
   <div>
-    <img src="../assets/login.png" />
+    <img class="mt-16" src="../assets/login.png" />
     <div class="w-10/12 flex flex-col mx-auto ">
         <heading class="text-xl mb-16">Login</heading>
     <form action="">
 
-      <div class="flex flex-col mb-4">
+      <div class="flex flex-col mb-8">
         <label for="email
         ">E-mail</label>
-        <input class="bg-gray-100 p-2" type="text" v-model="form.email" placeholder="loremipsum@gmail.nl"/>
+        <input class="ml-2 mt-1 bg-input p-3 rounded-sm font-light text-sm" type="text" v-model="form.email" placeholder="loremipsum@gmail.nl"/>
 
       </div>
       <div class="flex flex-col">
         <label for="password
         ">Wachtwoord</label>
-        <input class="bg-gray-100 p-2" placeholder="wachtwoord" type="password" v-model="form.password"/>
+        <input class="ml-2 mt-1 bg-input p-3 rounded-sm font-light text-sm" placeholder="wachtwoord" type="password" v-model="form.password"/>
         
       </div>
-      <router-link class="float-right text-xs mt-1 text-gray-400" to="password-reset">Wachtwoord vergeten?</router-link>
-      <primary-button class="mt-16">Inloggen</primary-button>
-      <router-link class="text-xs text-gray-400" to="register">Nog geen account? <span class="text-black font-semibold">Registreer</span></router-link>
+      <router-link class="float-right text-xs mt-2 text-ondertext font-light" to="resetpassword">Wachtwoord vergeten?</router-link>
+      <router-link to="profile">
+      <primary-button class="mt-16">Inloggen</primary-button></router-link>
+      <div class="flex justify-center">
+      <router-link class="text-xs font-light text-ondertext mt-2 " to="register">Nog geen account? <span class="text-black font-semibold">Registreer!</span></router-link>
+      </div>
     </form>
     </div>
 

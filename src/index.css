@@ -15,9 +15,48 @@ html, body {
     font-family: 'Josefin Sans', sans-serif;
   }
 
-  .v-bottom-navigation {
+.v-bottom-navigation {
     background-color: black !important;
     display: flex !important;
     position: fixed !important;
   }
 
+.vue-tabs .nav-tabs {
+  border-bottom: none !important;
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: white !important;
+}
+
+.vue-tabs {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.tab {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  border-radius: 0.125rem !important;
+  border-width: 2px !important;
+  border-color: black !important;
+}
+
+.tabs__link {
+  color: white !important;
+  background-color: black !important;
+  border-radius: 0px !important;
+  margin-right: 0px !important;
+  padding: 2px 8px 2px 8px !important;
+}
+
+.active_tab.tabs__link {
+  color: black !important;
+  border: black !important;
+  border-width: 4px !important;
+  background-color: white !important;
+  }
+
+  .tab-content {
+    width: 80% !important;
+  }

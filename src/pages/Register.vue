@@ -8,23 +8,29 @@
       <div class="flex flex-col mb-4">
         <label for="Volledige naam
         ">Volledige naam</label>
-        <input class="bg-gray-100 p-2" type="text" v-model="form.name" placeholder="John doe"/>
+        <input class="ml-2 mt-1 bg-input p-3 rounded-sm font-light text-sm" type="text" v-model="form.name" placeholder="John doe"/>
 
       </div>
        <div class="flex flex-col mb-4">
         <label for="email
         ">E-mail</label>
-        <input class="bg-gray-100 p-2" type="text" v-model="form.email" placeholder="loremipsum@gmail.nl"/>
+        <input class="ml-2 mt-1 bg-input p-3 rounded-sm font-light text-sm" type="text" v-model="form.email" placeholder="loremipsum@gmail.nl"/>
 
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col mb-4">
         <label for="password
-        ">Wachtwoord</label>
-        <input class="bg-gray-100 p-2" placeholder="wachtwoord" type="password" v-model="form.password"/>
-        
+        ">Wachtwoord aanmaken</label>
+        <input class="ml-2 mt-1 bg-input p-3 rounded-sm font-light text-sm" placeholder="wachtwoord" type="password" v-model="form.password"/>
+        </div>
+        <div class="flex flex-col">
+        <label for="password
+        ">Wachtwoord herhalen</label>
+        <input class="ml-2 mt-1 bg-input p-3 rounded-sm font-light text-sm" type="password" v-model="form.password" placeholder="wachtwoord"/>
       </div>
       <primary-button class="mt-16">Registreren</primary-button>
-      <router-link class="text-xs text-gray-400" to="register">Heb je al een account? <span class="text-black font-semibold">Login</span></router-link>
+      <div class="flex justify-center">
+      <router-link class="text-xs font-light text-ondertext mt-2" to="login">Heb je al een account? <span class="text-black font-semibold">Login!</span></router-link>
+      </div>
     </form>
     </div>
 
