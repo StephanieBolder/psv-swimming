@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div v-for="event in newEvents" :key="event.id">
+    <div v-for="part in event.parts" :key="part.id">
         <div class="flex flex-col mx-12">
     <div class="flex flex-row justify-between mt-8 ">
       <events-titles class="">
@@ -17,19 +17,34 @@
 <dropdown>
     <template #header>
         <div class="">
-            <card>
-                <div class="flex flex-row">
+            <card class="align-center items-center">
+                <div class="flex flex-row justify-between mx-3 ">
                     <events-titles>
-                        {{event.date}}
+                        {{part.date}}
                     </events-titles>
-                <div class="">
-                        {{event.gender}}
+                <div class="text-sm">
+                        {{part.gender}}
+                </div>
+                </div>
+            </card>
+        </div>
+    </template>
+    <template #content>
+        <div class="">
+            <card>
+                <div class="flex flex-col justify-between mx-3 ">
+                <div v-for="(distance, i) in part.distances" :key="i">
+                    <div class="flex flex-col">
+                        {{part.name}}, {{part.distances}}
+                    </div>
                 </div>
                 </div>
             </card>
         </div>
     </template>
 </dropdown>
+
+
         </div>
 
 
@@ -129,8 +144,39 @@ export default {
 
   data() {
     return {
-      newEvents: [{name: 'Dutch masters', date: "20 - 23 nov", location: "Eindhoven", deadline:"12 november", status:"Goedgekeurd", gender:"M & V"},{name: 'Wemeldinge masters', date: "16 -19 dec", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.", location: "Wemeldinge", deadline:"11 december", status:"In afwachting"},{name: 'Dutch masters', date: "12-18 jan", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.", location: "Eindhoven", deadline:"2 januari", status:"Afgewezen"}],
-      registeredEvents: [],
+      event: {
+        name: "Dutch masters",
+        date: "20 - 23 november",
+        location: "Eindhoven",
+        deadline: "12 november",
+        parts: [
+          {
+            id: 1,
+            date: "20 november",
+            name: "Breaststroke",
+            distances: ["500m", "100m", "200m"],
+            gender: "M & V",
+          },
+          {
+            id: 2,
+            date: "21 november",
+            name: "Backstroke",
+            distances: ["500m", "100m", "200m"],
+          },
+          {
+            id: 3,
+            date: "22 november",
+            name: "Sidestroke",
+            distances: ["500m", "100m", "200m"],
+          },
+          {
+            id: 4,
+            date: "23 november",
+            name: "Backstroke",
+            distances: ["500m", "100m", "200m"],
+          },
+        ],
+      },
     };
   },
 };
