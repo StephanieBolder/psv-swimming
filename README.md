@@ -5,7 +5,7 @@ This project includes
 ## Status
 Finishing touches
 
-## Installatie
+## Installation
 Create a repository and clone this repository with `git clone https://github.com/StephanieBolder/psv-swimming`. Use `npm install` and `npm run serve` for your own repository server. For additional opties use `npm run setup`, to also register the name of your site.
 
 ## Authors
