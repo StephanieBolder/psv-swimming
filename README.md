@@ -1,6 +1,5 @@
 # PSV Swimming
 This project is part of the PSV Swimming new application. This repository does not contain the services needed for the backend. This project is focused on the frontend, for the repository that includes frontend and backend, see the link below. 
-This project includes 
 
 ## Status
 Finishing touches
@@ -30,6 +29,9 @@ Create a repository and clone this repository with `git clone https://github.com
 - Node.JS Command Prompt
 - Google Chrome
 - Adobe XD
+
+## PSV Swimming project including backend
+- [PSV-Swimming](https://github.com/StephanieBolder/psvswimming)
 
 ## Project setup
 ```
